@@ -1,0 +1,92 @@
+<h1>{{headinglbl}}</h1>
+<form [formGroup]="regFrom" (ngSubmit)= "onSubmitForm()">
+  <table>
+    <tr>
+      <td>{{fnamelbl}}
+        <input formControlName="fname">
+          <div *ngIf="fname.errors && isValidFormSubmitted != null">
+            <div *ngIf="fname.errors.required">
+              {{unamError1}}
+            </div>
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>{{lname}}
+        <input formControlName="lastname">
+        <div *ngIf="lastname.errors && isValidFormSubmitted != null">
+          <div *ngIf="lastname.errors.required">
+            {{lastError}}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Email Id:
+        <input formControlName="email">
+        <div *ngIf="email.errors && isValidFormSubmitted != null">
+          <div *ngIf="email.errors.required">
+            {{emailError}}
+          </div>
+          <div *ngIf="email.errors.pattern">
+              {{emailError1}}
+            </div>
+        </div>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <!-- Gender:
+        <select formControlName="genderList1">
+          <option *ngFor="let selectedItem of genderList1">
+            {{selectedItem.viewValue}}
+          </option>
+        </select> -->
+        <mat-form-field>
+            <mat-select placeholder="Gender">
+              <mat-option *ngFor="let selectedItem of genderList1" [value]="selectedItem.value">
+                {{selectedItem.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+      </td>
+    </tr>
+
+
+    <tr>
+        <td>
+
+        {{qualificationlabel}}
+        <mat-form-field>
+          <mat-select>
+            <mat-option *ngFor="let selectedItem of qualificationList" [value]="selectedItem.value">
+                {{selectedItem.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+          <!-- <select formControlName="qualificationList">
+            <option *ngFor="let selectedItem of qualificationList">
+              {{selectedItem.viewValue}}
+            </option>
+          </select> -->
+        </td>
+      </tr>
+    <tr>
+      <td>
+        Phone No:
+        <input type="text" name="Phone_no">
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <button>Submit</button>
+      </td>
+    </tr>
+
+
+  </table>
+</form>

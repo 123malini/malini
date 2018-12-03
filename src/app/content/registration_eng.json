@@ -1,0 +1,28 @@
+{
+    "headinglbl" : "Registration Form",
+    "fnamelbl" : "Frist Name:",
+    "lname" : "Last Name:",
+    "unamError1" : "First Name is Required",
+    "lastError" : "Last Name is required",
+    "emailError" : "Email is required",
+    "emailError1" : "Email is not valid",
+     "qualificationlabel" :"Qualification",
+    "genderList1" : [
+        
+        {"value" : "S", "viewValue" : "Select One"},
+
+        {"value" : "M", "viewValue" : "Male"},
+        
+        {"value" : "F", "viewValue" : "Female"}
+    ],
+    
+
+    "qualificationList" : [
+      
+        {"value" : "S", "viewValue" : "Select One"},
+        {"value" : "M", "viewValue" : "M Tech"},
+        {"value" : "B", "viewValue" : "B.Tech"}
+
+
+    ]
+}
